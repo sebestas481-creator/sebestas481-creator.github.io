@@ -1,25 +1,85 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="utf-8">
-    <title>Moje zájmy</title>
-\
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Štěpán Šebesta | Moje portfolio</title>
+    <link rel="stylesheet" href="sty.css">
 </head>
 <body>
-    <h1>Vítejte na mém webu</h1>
-    <p>Tohle je můj první web, kde zkouším základy HTML.</p>
+    <header>
+        <nav>
+            <a class="logo" href="#uvod">Štěpán Šebesta</a>
+            <ul>
+                <li><a href="#o-mne">O mně</a></li>
+                <li><a href="#projekty">Moje projekty</a></li>
+                <li><a href="#zdroje">Zdroje a validace</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Co mě baví</h2>
-    <ul>
-        <li>Cvičení a posilovna</li>
-        <li>Běhání na čas</li>
-        <li>Filmy (hlavně Marvel a Rychle a zběsile)</li>
-    </ul>
+    <main>
+        <section class="uvod" id="uvod">
+            <div class="uvod-text">
+                <p class="nadpisek">STUDENT · ZAČÍNAJÍCÍ VÝVOJÁŘ</p>
+                <h1>Ahoj, já jsem<br><span>Štěpán Šebesta.</span></h1>
+                <p>Učím se tvořit webové stránky. Tohle je moje portfolio, kde ukazuji, co jsem se zatím naučil.</p>
+                <a class="tlacitko" href="#projekty">Prohlédnout projekty</a>
+            </div>
+            <img src="https://picsum.photos/seed/stepan-portfolio/600/420" alt="Ilustrační fotografie do portfolia">
+        </section>
 
-    <h2>Můj oblíbený odkaz</h2>
-    <p>Tady si zkouším testy na <a href="https://www.etesty2.mdcr.cz/">řidičák</a>.</p>
+        <section class="o-mne" id="o-mne">
+            <h2>O mně</h2>
+            <p>Jsem student a zajímám se o tvorbu webů. Zatím se učím HTML a CSS a zkouším si vytvářet vlastní stránky.</p>
+            <p>Chci se zlepšovat a postupně přidávat další projekty.</p>
+        </section>
 
-    <h2>Obrázek</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Weights_in_a_gym.jpg/320px-Weights_in_a_gym.jpg" alt="Činky v posilovně">
+        <section class="projekty" id="projekty">
+            <h2>Moje projekty</h2>
+            <p>Tady jsou moje školní a osobní ukázky. Stránky vytvářím postupně při učení.</p>
+            <div class="projekt-list">
+                <article class="projekt">
+                    <h3>Můj první web</h3>
+                    <p>Jednoduchá stránka o mých zájmech. Obsahuje nadpisy, odkaz, obrázek a seznam. Požadavky i validaci splňuje tato ukázka školního zadání.</p>
+                    <a href="prvni-web.html">Otevřít první web</a>
+                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2Fprvni-web.html">Zkontrolovat HTML</a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">Zkontrolovat CSS</a>
+                </article>
+
+                <article class="projekt">
+                    <h3>Google Search</h3>
+                    <p>Školní cvičení s formulářem, textovým polem a tlačítkem. Vyhledávání se odešle na Google; stránka má odkazy na validaci HTML a CSS.</p>
+                    <a href="google-search.html">Otevřít projekt Google Search</a>
+                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2Fgoogle-search.html">Zkontrolovat HTML</a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">Zkontrolovat CSS</a>
+                </article>
+
+                <article class="projekt">
+                    <h3>Můj předchozí projekt</h3>
+                    <p>Starší verzi mé stránky jsem přesunul do samostatné složky.</p>
+                    <a href="html/">Otevřít projekt ve složce html</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="zdroje" id="zdroje">
+            <h2>Zdroje a validace</h2>
+            <p>Ilustrační obrázek: <a href="https://picsum.photos/">Picsum Photos</a>. Vyhledávání: <a href="https://www.google.com/">Google</a>. HTML ověřuje <a href="https://validator.w3.org/">W3C Nu Validator</a> a CSS <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator</a>. Ostatní texty a kód jsou moje školní práce.</p>
+            <p>Odkazy na validátory HTML a CSS najdeš u jednotlivých projektů.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Štěpán Šebesta</p>
+        <div class="validace">
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2F">
+                <img src="https://www.w3.org/Icons/valid-html5" alt="Ověřit HTML stránky">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Ověřit CSS stránky">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
