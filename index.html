@@ -1,85 +1,232 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Štěpán Šebesta | Moje portfolio</title>
+    <meta name="theme-color" content="#17231c">
+    <meta name="description" content="Portfolio Štěpána Šebesty — student a začínající webový vývojář.">
+    <title>Štěpán Šebesta — Webový vývojář</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="#uvod">Štěpán Šebesta</a>
-            <ul>
-                <li><a href="#o-mne">O mně</a></li>
-                <li><a href="#projekty">Moje projekty</a></li>
-                <li><a href="#zdroje">Zdroje a validace</a></li>
-            </ul>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Hlavní navigace">
+            <a class="brand" href="#domu" aria-label="Štěpán Šebesta, úvod">
+                <span class="brand-mark">ŠŠ</span>
+                <span>Štěpán<span class="brand-muted">.dev</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="html/">Archivní verze</a>
+                <a href="#o-mne">O mně</a>
+                <a href="#dovednosti">Dovednosti</a>
+                <a href="#projekty">Projekty</a>
+                <a class="nav-cta" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="uvod" id="uvod">
-            <div class="uvod-text">
-                <p class="nadpisek">STUDENT · ZAČÍNAJÍCÍ VÝVOJÁŘ</p>
-                <h1>Ahoj, já jsem<br><span>Štěpán Šebesta.</span></h1>
-                <p>Učím se tvořit webové stránky. Tohle je moje portfolio, kde ukazuji, co jsem se zatím naučil.</p>
-                <a class="tlacitko" href="#projekty">Prohlédnout projekty</a>
+        <section class="hero container" id="domu" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="availability"><span class="availability-dot"></span> Student · webový vývojář</p>
+                <h1 id="hero-title">Ahoj, jsem<br><span class="name-highlight">Štěpán Šebesta.</span></h1>
+                <p class="hero-lead">Tvořím weby, které jsou <span>rychlé, přehledné</span> a dobře vypadají na každé obrazovce.</p>
+                <p class="hero-description">Jsem student a baví mě přetvářet nápady ve funkční webové stránky. Učím se nové technologie a každý projekt beru jako příležitost udělat další krok.</p>
+                <div class="hero-actions">
+                    <a class="button button-lime" href="#projekty">Prohlédnout projekty <span aria-hidden="true">↓</span></a>
+                    <a class="button button-quiet" href="#o-mne">Více o mně <span aria-hidden="true">↘</span></a>
+                </div>
+                <div class="hero-bottom">
+                    <span class="hero-line"></span>
+                    <span>Učím se. Tvořím. Zlepšuji se.</span>
+                </div>
             </div>
-            <img src="https://picsum.photos/seed/stepan-portfolio/600/420" alt="Ilustrační fotografie do portfolia">
+
+            <div class="hero-visual" aria-label="Ilustrace pracovního prostředí webového vývojáře">
+                <div class="visual-glow"></div>
+                <div class="orbit orbit-a"></div>
+                <div class="orbit orbit-b"></div>
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                        <span>stepan.js</span>
+                        <span class="terminal-menu" aria-hidden="true">•••</span>
+                    </div>
+                    <div class="terminal-code" aria-label="Ukázka jednoduchého kódu">
+                        <p><span class="line-number">01</span> <span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
+                        <p><span class="line-number">02</span> &nbsp; name: <span class="code-green">'Štěpán'</span>,</p>
+                        <p><span class="line-number">03</span> &nbsp; learns: <span class="code-green">'every day'</span>,</p>
+                        <p><span class="line-number">04</span> &nbsp; builds: <span class="code-green">'for the web'</span></p>
+                        <p><span class="line-number">05</span> }<span class="cursor"></span></p>
+                    </div>
+                    <div class="terminal-status"><span><i></i> připraven tvořit</span><span>HTML · CSS · JS</span></div>
+                </div>
+                <div class="float-chip chip-one"><span aria-hidden="true">✳</span> nápad → realita</div>
+                <div class="float-chip chip-two"><span aria-hidden="true">⌘</span> tvořím s chutí</div>
+                <div class="visual-index">01 <span>/</span> 04</div>
+            </div>
+            <a class="scroll-link" href="#o-mne"><span aria-hidden="true">↓</span> Posuň se dál</a>
         </section>
 
-        <section class="o-mne" id="o-mne">
-            <h2>O mně</h2>
-            <p>Jsem student a zajímám se o tvorbu webů. Zatím se učím HTML a CSS a zkouším si vytvářet vlastní stránky.</p>
-            <p>Chci se zlepšovat a postupně přidávat další projekty.</p>
-        </section>
-
-        <section class="projekty" id="projekty">
-            <h2>Moje projekty</h2>
-            <p>Tady jsou moje školní a osobní ukázky. Stránky vytvářím postupně při učení.</p>
-            <div class="projekt-list">
-                <article class="projekt">
-                    <h3>Můj první web</h3>
-                    <p>Jednoduchá stránka o mých zájmech. Obsahuje nadpisy, odkaz, obrázek a seznam. Požadavky i validaci splňuje tato ukázka školního zadání.</p>
-                    <a href="prvni-web.html">Otevřít první web</a>
-                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2Fprvni-web.html">Zkontrolovat HTML</a>
-                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">Zkontrolovat CSS</a>
-                </article>
-
-                <article class="projekt">
-                    <h3>Google Search</h3>
-                    <p>Školní cvičení s formulářem, textovým polem a tlačítkem. Vyhledávání se odešle na Google; stránka má odkazy na validaci HTML a CSS.</p>
-                    <a href="google-search.html">Otevřít projekt Google Search</a>
-                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2Fgoogle-search.html">Zkontrolovat HTML</a>
-                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">Zkontrolovat CSS</a>
-                </article>
-
-                <article class="projekt">
-                    <h3>Můj předchozí projekt</h3>
-                    <p>Starší verzi mé stránky jsem přesunul do samostatné složky.</p>
-                    <a href="html/">Otevřít projekt ve složce html</a>
-                </article>
+        <section class="about section-light" id="o-mne" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div class="about-heading">
+                    <p class="section-kicker"><span>01</span> / O mně</p>
+                    <h2 id="about-title">Zvědavost mě<br>posouvá <span>dál.</span></h2>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">Jsem Štěpán — student, kterého baví webový vývoj a všechno, co se dá vytvořit pomocí kódu.</p>
+                    <p class="about-copy">Svůj volný čas věnuji učení, zkoušení nových nápadů a stavění vlastních webových projektů. Záleží mi na tom, aby stránka nejen dobře vypadala, ale byla také jednoduchá na používání.</p>
+                    <div class="about-note"><span aria-hidden="true">✳</span> Nejlepší způsob, jak se učit, je tvořit.</div>
+                </div>
             </div>
         </section>
 
-        <section class="zdroje" id="zdroje">
-            <h2>Zdroje a validace</h2>
-            <p>Ilustrační obrázek: <a href="https://picsum.photos/">Picsum Photos</a>. Vyhledávání: <a href="https://www.google.com/">Google</a>. HTML ověřuje <a href="https://validator.w3.org/">W3C Nu Validator</a> a CSS <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator</a>. Ostatní texty a kód jsou moje školní práce.</p>
-            <p>Odkazy na validátory HTML a CSS najdeš u jednotlivých projektů.</p>
+        <section class="skills section-dark" id="dovednosti" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="skills-heading">
+                    <div>
+                        <p class="section-kicker"><span>02</span> / Výbava</p>
+                        <h2 id="skills-title">Technologie,<br>které <span>poznávám.</span></h2>
+                    </div>
+                    <p class="skills-description">Postupně objevuji nástroje pro tvorbu moderních webů. Tady je to, čemu se věnuji.</p>
+                </div>
+                <div class="skill-list">
+                    <article class="skill-card">
+                        <span class="skill-number">01</span>
+                        <span class="skill-icon icon-html" aria-hidden="true">&lt;/&gt;</span>
+                        <h3>HTML</h3>
+                        <p>Struktura a obsah stránek</p>
+                        <span class="skill-focus">Učím se a procvičuji</span>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">02</span>
+                        <span class="skill-icon icon-css" aria-hidden="true">✳</span>
+                        <h3>CSS</h3>
+                        <p>Vzhled a responzivní design</p>
+                        <span class="skill-focus">Učím se a procvičuji</span>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">03</span>
+                        <span class="skill-icon icon-js" aria-hidden="true">JS</span>
+                        <h3>JavaScript</h3>
+                        <p>Interakce a nové možnosti</p>
+                        <span class="skill-focus">Právě se učím</span>
+                    </article>
+                    <article class="skill-card skill-card-note">
+                        <span class="skill-number">04</span>
+                        <span class="skill-icon icon-plus" aria-hidden="true">+</span>
+                        <h3>Další na řadě</h3>
+                        <p>Stále je co objevovat.</p>
+                        <span class="skill-note">learning mode <span aria-hidden="true">↗</span></span>
+                    </article>
+                </div>
+                <p class="skill-footnote">Dovednosti jsou součástí mé cesty — učím se a posouvám je projektem po projektu.</p>
+            </div>
+        </section>
+
+        <section class="projects section-light" id="projekty" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="projects-heading">
+                    <div>
+                        <p class="section-kicker"><span>03</span> / Vybraná tvorba</p>
+                        <h2 id="projects-title">Nápady, které<br>dostávají <span>tvar.</span></h2>
+                    </div>
+                    <p class="projects-intro">Každý vlastní web je pro mě šance naučit se něco nového a dostat nápad z hlavy na obrazovku.</p>
+                </div>
+                <article class="project-feature">
+                    <div class="project-art" aria-label="Grafická ukázka návrhu osobního webu">
+                        <div class="browser-window">
+                            <div class="browser-bar"><span></span><span></span><span></span><i></i></div>
+                            <div class="browser-page">
+                                <div class="browser-nav"><b>ŠTĚPÁN<span>.</span></b><i></i><i></i><i></i></div>
+                                <div class="browser-content">
+                                    <div class="browser-copy"><i></i><strong>Ahoj, jsem<br>Štěpán.</strong><span></span><span></span><em></em></div>
+                                    <div class="browser-avatar">ŠŠ</div>
+                                </div>
+                                <div class="browser-footer"><i></i><i></i><i></i></div>
+                            </div>
+                        </div>
+                        <span class="project-art-label">OSOBNÍ WEB · 2026</span>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Osobní projekt</p>
+                        <h3>Moje portfolio</h3>
+                        <p>Osobní web, na kterém představuji sebe, své dovednosti a první kroky ve světě webového vývoje. Navržený s důrazem na čistý vzhled a pohodlné zobrazení na mobilu.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>Responzivní design</span></div>
+                        <a class="project-link" href="#kontakt">Chceš se na něco zeptat? <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <div class="assignment-links" aria-label="Další projekty">
+                    <a class="assignment-link" href="https://sebestas481-creator.github.io/projekt-web1/?classId=8b83ac6f-ae95-42b3-b2b0-61f19727c4a2&amp;assignmentId=1e80bc91-6833-4fbf-adb9-a0d459aa57a9&amp;submissionId=9251213d-7df4-16a9-61ee-86ae5d5a07c7" target="_blank" rel="noopener noreferrer">
+                        <span class="assignment-meta">01 / ŠKOLNÍ PROJEKT</span>
+                        <strong>Projekt Web 1</strong>
+                        <span class="assignment-open">Otevřít projekt <span aria-hidden="true">↗</span></span>
+                    </a>
+                    <a class="assignment-link" href="https://sebestas481-creator.github.io/?classId=8b83ac6f-ae95-42b3-b2b0-61f19727c4a2&amp;assignmentId=913305c9-737e-4b6d-8906-33aad122d4d8&amp;submissionId=6a3a5fa2-51a7-3ab1-6a03-523f7b70a928" target="_blank" rel="noopener noreferrer">
+                        <span class="assignment-meta">02 / ŠKOLNÍ PROJEKT</span>
+                        <strong>Moje portfolio</strong>
+                        <span class="assignment-open">Otevřít projekt <span aria-hidden="true">↗</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+                <p class="section-kicker"><span>04</span> / Spojme se</p>
+                <h2 id="contact-title">Máš zajímavý<br><span>nápad?</span></h2>
+                <p>Rád poznám nové lidi, proberu zajímavý projekt nebo si popovídám o webech.</p>
+                <a class="button button-dark" href="https://github.com/sebestas481-creator" target="_blank" rel="noreferrer">Najdeš mě na GitHubu <span aria-hidden="true">↗</span></a>
+                <span class="contact-decoration" aria-hidden="true">✳</span>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Štěpán Šebesta</p>
-        <div class="validace">
-            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2F">
-                <img src="https://www.w3.org/Icons/valid-html5" alt="Ověřit HTML stránky">
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fsty.css">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Ověřit CSS stránky">
-            </a>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand footer-brand" href="#domu"><span class="brand-mark">ŠŠ</span><span>Štěpán<span class="brand-muted">.dev</span></span></a>
+            <p>Vytvořeno s chutí učit se. © 2026 Štěpán Šebesta</p>
+            <a class="back-to-top" href="#domu">Zpět nahoru <span aria-hidden="true">↑</span></a>
+        </div>
+        <div class="archive-sources container">
+            <p>Použité fonty: <a href="https://fonts.google.com/specimen/DM+Mono">DM Mono</a>, <a href="https://fonts.google.com/specimen/DM+Sans">DM Sans</a> a <a href="https://fonts.google.com/specimen/Manrope">Manrope</a>.</p>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebestas481-creator.github.io%2F"><img src="https://www.w3.org/Icons/valid-html5" alt="Ověřit HTML této stránky"></a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebestas481-creator.github.io%2Fstyle.css"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Ověřit CSS této stránky"></a>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        function closeNavigation() {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Otevřít navigaci');
+            navLinks.classList.remove('is-open');
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+            menuToggle.setAttribute('aria-label', isExpanded ? 'Otevřít navigaci' : 'Zavřít navigaci');
+            navLinks.classList.toggle('is-open', !isExpanded);
+        });
+
+        navLinks.addEventListener('click', (event) => {
+            if (event.target instanceof Element && event.target.closest('a')) {
+                closeNavigation();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                closeNavigation();
+                menuToggle.focus();
+            }
+        });
+    </script>
 </body>
 </html>
